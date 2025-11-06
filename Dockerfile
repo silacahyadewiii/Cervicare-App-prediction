@@ -5,7 +5,7 @@ FROM python:3.12-slim
 RUN apt-get update && apt-get install -y build-essential libsndfile1 \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR backend/app
+WORKDIR /app
 
 # copy requirements
 COPY backend/requirements.txt .
