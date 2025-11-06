@@ -1,4 +1,4 @@
-# backend/Dockerfile
+/# backend/Dockerfile
 FROM python:3.12-slim
 
 # system deps for TF might be heavy; add minimal
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y build-essential libsndfile1 \
 WORKDIR /app/backend
 
 # copy requirements
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # copy app
