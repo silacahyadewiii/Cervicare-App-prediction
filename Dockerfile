@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # copy app
-COPY app ./app
+COPY backend/app ./app
 COPY backend/models ./models
 
 # Expose port
