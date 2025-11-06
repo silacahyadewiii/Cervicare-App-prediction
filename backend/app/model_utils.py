@@ -5,7 +5,7 @@ from tensorflow.keras.applications.resnet import preprocess_input
 from PIL import Image
 
 # Load model sekali saat startup
-MODEL_PATH = r"C:\Users\HP\Cervical-Cancer-app-prediction-sila\backend\models\end2A_modelA.keras"
+MODEL_PATH = r"C:\Users\HP\Cervical-Cancer-app-prediction-sila\Cervicare-App-prediction\backend\models"
 model = load_model(MODEL_PATH)
 print("Model loaded successfully.")
 
