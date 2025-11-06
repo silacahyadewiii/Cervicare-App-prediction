@@ -1,11 +1,16 @@
+import os
 import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet import preprocess_input
 from PIL import Image
 
+# Path model relatif (CROSS-PLATFORM, aman untuk deployment)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "end2A_modelA.keras")
+MODEL_PATH = os.path.normpath(MODEL_PATH)
+
 # Load model sekali saat startup
-MODEL_PATH = r"C:\Users\HP\Cervical-Cancer-app-prediction-sila\Cervicare-App-prediction\backend\models"
 model = load_model(MODEL_PATH)
 print("Model loaded successfully.")
 
